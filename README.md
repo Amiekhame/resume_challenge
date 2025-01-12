@@ -133,7 +133,6 @@ This project involves:
 
 ---
 
-
 ## Conclusion
 
 This project demonstrates the deployment of a secure, dynamic resume website using AWS services. Follow the detailed steps to replicate or enhance the setup, and leverage the provided placeholders for logs and screenshots to track your progress.
