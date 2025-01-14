@@ -25,8 +25,8 @@ jobs:
 
       - name: Sync files to S3
         run: |
-          aws s3 sync . s3://osho-resume --delete
+          aws s3 sync . s3://osho-resume-2 --delete
 
       - name: Invalidate CloudFront Cache
         run: |
-          aws cloudfront create-invalidation --distribution-id EMG1I0DLL7VCQ --paths "/*"
+          aws cloudfront create-invalidation --distribution-id E3LQEP5NGVKIEH --paths "/*"
