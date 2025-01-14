@@ -1,0 +1,168 @@
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header Styling */
+header {
+    background: #1e3a8a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #2563eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+header a {
+    color: #93c5fd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section Styles */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: popIn 1s ease-in-out;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Section Headers */
+section h2 {
+    font-size: 1.8rem;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #2563eb;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Lists */
+ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+ul li {
+    margin: 8px 0;
+    line-height: 1.4;
+    transition: transform 0.2s ease;
+}
+
+ul li:hover {
+    transform: translateX(10px);
+}
+
+/* Article (Professional Experience) Styling */
+article h3 {
+    font-size: 1.5rem;
+    color: #4b5563;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+article h3:hover {
+    color: #2563eb;
+}
+
+article p {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin: 5px 0 15px;
+    font-style: italic;
+}
+
+/* Links Styling */
+a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #1e40af;
+}
+
+/* Contact Section Styling */
+section:last-child {
+    background: #f1f5f9;
+    padding: 10px 20px;
+    border-radius: 8px;
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Footer Styling (Optional) */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1e3a8a;
+    color: #fff;
+    font-size: 0.9rem;
+    border-top: 3px solid #2563eb;
+}
