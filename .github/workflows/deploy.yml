@@ -14,19 +14,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # 2. Configure AWS Credentials
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: arn:aws:iam::833313251669:role/githubactionsrole
           aws-region: us-east-1
 
-      - name: Sync files to S3
+      # 3. Sync files to the first S3 bucket
+      - name: Sync files to the first S3 bucket
+        run: |
+          aws s3 sync . s3://osho-resume --delete
+
+      # 4. Sync files to the second S3 bucket
+      - name: Sync files to the second S3 bucket
         run: |
           aws s3 sync . s3://osho-resume-2 --delete
 
-      - name: Invalidate CloudFront Cache
+      # 5. Invalidate the first CloudFront cache
+      - name: Invalidate the first CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id EMG1I0DLL7VCQ --paths "/*"
+
+      # 6. Invalidate the second CloudFront cache
+      - name: Invalidate the second CloudFront Cache
         run: |
           aws cloudfront create-invalidation --distribution-id E3LQEP5NGVKIEH --paths "/*"
